@@ -1,0 +1,29 @@
+body {
+    background-image: url('/static/booking/bg.jpg'); /* Make sure you put bg.jpg in static/booking/ */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+.navbar, .card, .alert {
+    opacity: 0.95;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+    color: #fff;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+}

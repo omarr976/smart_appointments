@@ -1,0 +1,49 @@
+{% extends 'booking/base.html' %}
+
+{% block title %}About Us - Smart Appointments{% endblock %}
+
+{% block content %}
+<style>
+  /* Full-page background image */
+  body {
+    background-image: url('https://illuminated-integration.com/wp-content/uploads/2023/08/foosball.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  /* Overlay container to improve readability */
+  .content-wrapper {
+    background-color: rgba(255, 255, 255, 0.88);
+    max-width: 720px;
+    margin: 50px auto 70px auto;
+    padding: 40px 45px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    color: #222;
+  }
+
+  h1 {
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+</style>
+
+<div class="content-wrapper">
+  <h1>About Us</h1>
+  <p>Welcome to Smart Appointments! This app was created to help you easily manage your appointments with simplicity and efficiency.</p>
+  <p>Our mission is to provide a seamless booking experience with a clean and intuitive interface.</p>
+  <p>If you have any questions, feel free to contact us.</p>
+</div>
+{% endblock %}

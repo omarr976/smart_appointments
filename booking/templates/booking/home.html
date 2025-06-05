@@ -1,0 +1,65 @@
+{% extends "booking/base.html" %}
+{% block title %}Available Services{% endblock %}
+
+{% block content %}
+<style>
+    .services-section {
+        background-image: url("https://web-static.wrike.com/blog/content/uploads/2017/09/12-jeux-hors-du-commun-pour-favoriser-lesprit-de-quipe.jpg?av=e29a765547b723335daad07740fefea8");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        padding: 60px 30px;
+    }
+
+    .services-overlay {
+        background-color: rgba(0, 0, 0, 0.65);
+        padding: 40px;
+        border-radius: 12px;
+        color: #fff;
+    }
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.95);
+        border: none;
+    }
+
+    .card-title {
+        font-weight: bold;
+    }
+
+    .btn-book {
+        background-color: #28a745;
+        color: white;
+        border: none;
+    }
+
+    .btn-book:hover {
+        background-color: #218838;
+    }
+</style>
+
+<div class="services-section">
+    <div class="container services-overlay">
+        <h2 class="mb-4 text-center">Available Smart Appointments</h2>
+
+        <div class="row">
+            {% for service in services %}
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">{{ service.name }}</h5>
+                            <p class="card-text">{{ service.description }}</p>
+                            <a href="{% url 'book_appointment' service.id %}" class="btn btn-book mt-auto">Book</a>
+                        </div>
+                    </div>
+                </div>
+            {% empty %}
+                <div class="text-center">
+                    <p>No services available at the moment.</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
